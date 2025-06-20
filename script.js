@@ -1,7 +1,7 @@
 let humanScore = 0;
 let computerScore = 0;
-let computerChoice = '';
-let humanChoice = '';
+let computerChoice;
+let humanChoice;
 
 
 function getComputerChoice() {
@@ -24,14 +24,12 @@ function getHumanChoice() {
 }
 
 function tellScore() {
-    console.log("User score: " + humanScore)
-    console.log("Computer score: " + computerScore)
+        console.log("User score: " + humanScore)
+        console.log("Computer score: " + computerScore)
 }
 
 function playRound(computerChoice, humanChoice) {
     let humanWins;
-    console.log(humanChoice);
-    console.log(computerChoice);
 
     if (computerChoice == humanChoice) {
         console.log("It's a tie! " + computerChoice + " is equal to " + humanChoice)
@@ -73,9 +71,17 @@ function playRound(computerChoice, humanChoice) {
     }
 }
 
-getComputerChoice();
-getHumanChoice();
-playRound(computerChoice, humanChoice);
+function playGame() {
+    for (let i = 1; i < 6; i++) {
+        console.log("Game " + i + " of 5");
+        getHumanChoice();
+        getComputerChoice();
+        playRound(computerChoice, humanChoice);
+    }
+    console.log('That was five games. Thank you for playing! Refresh the page to restart.');
+}
+
+playGame();
 
 //game logic
 
