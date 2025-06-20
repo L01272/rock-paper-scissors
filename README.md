@@ -1,5 +1,7 @@
 # rock-paper-scissors
 
-A javascript project for a rock, paper, scissors game.
+A javascript console project for a rock, paper, scissors game.
 
-Live link: 
+Play up to five rounds with scoring.
+
+Live link: https://l01272.github.io/rock-paper-scissors/
