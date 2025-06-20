@@ -1,9 +1,18 @@
 //computer opponent logic
 
-// function getComputerChoice will randomly return 1 of 3 options: RPS. 
-// Use math.random for anything between 0 to 1. 
-// Make the three options equal 1/3 of 1 using if blocks.
-// Return one of three strings with the option. Use console.log
+function getComputerChoice() {
+    let randomNumber = Math.random();
+    let computerChoice = '';
+
+    if (randomNumber <= 0.33) {
+        computerChoice = 'Rock'
+    } else if (randomNumber >= 0.34 && randomNumber <= 0.66) {
+        computerChoice = 'Paper'
+    } else {
+        computerChoice = 'Scissors'
+    }
+    console.log('Computer has selected: ' + computerChoice)
+}
 
 //human logic
 
@@ -29,5 +38,4 @@
 //if you assign playRound to a variable, it will return the value of the function end
 
 //Refactor after implmenting for bonus points
-
 //DO NOT GO OVERBOARD. Save the effort for portfolio
